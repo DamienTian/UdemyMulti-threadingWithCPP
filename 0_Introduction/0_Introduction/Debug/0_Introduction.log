@@ -1,2 +1,3 @@
 ﻿  0_Introduction.cpp
-  0_Introduction.vcxproj -> D:\GithubProjects\UdemyMulti-threadingWithCPP\0_Introduction\Debug\0_Introduction.exe
+D:\GithubProjects\UdemyMultiThreadingWithCPP\0_Introduction\0_Introduction\0_Introduction.cpp(32,28): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+  0_Introduction.vcxproj -> D:\GithubProjects\UdemyMultiThreadingWithCPP\0_Introduction\Debug\0_Introduction.exe
