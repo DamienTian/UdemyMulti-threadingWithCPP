@@ -1,0 +1,3 @@
+﻿  1_Locks.cpp
+D:\GithubProjects\UdemyMultiThreadingWithCPP\1_Locks\1_Locks\1_Locks.cpp(14,28): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+  1_Locks.vcxproj -> D:\GithubProjects\UdemyMultiThreadingWithCPP\1_Locks\Debug\1_Locks.exe
