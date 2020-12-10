@@ -42,3 +42,7 @@
 1_Locks/Debug/1_Locks.pdb
 1_Locks/.vs/1_Locks/v16/.suo
 1_Locks/.vs/1_Locks/v16/.suo
+*.pdb
+*.tlog
+*.exe
+2_ReturnValuesFromThread/Debug/2_ReturnValuesFromThread.ilk
