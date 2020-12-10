@@ -7,6 +7,25 @@
 
 using namespace std;
 
+class App {
+private:
+    int count = 0;
+    mutex mtx;
+
+public:
+    void operator() () {
+        const int ITERATIONS = 1e6;
+
+        for (int i = 0; i < ITERATIONS; ++i) {
+            //lock_guard<mutex> guard(mtx);    // lock mutex, unlock the mutex at the end of the loop (out of scope)
+            unique_lock<mutex> guard(mtx);  // works the same, but with more functionalities
+            count++;
+        }
+    }
+
+    int getCount() { return count; }
+};
+
 void work_0(int &count, mutex &mtx) {
     const int ITERATIONS = 1e6;
 
@@ -35,12 +54,13 @@ void work_1(int& count, mutex& mtx) {
     const int ITERATIONS = 1e6;
 
     for (int i = 0; i < ITERATIONS; ++i) {
-        lock_guard<mutex> guard(mtx);    // lock mutex, unlock the mutex at the end of the loop (out of scope)
+        //lock_guard<mutex> guard(mtx);    // lock mutex, unlock the mutex at the end of the loop (out of scope)
         unique_lock<mutex> guard(mtx);  // works the same, but with more functionalities
         count++;
     }
 }
 
+// Section 9: Lock Guards
 void Section9_LockGuard() {
     int count = 0;
     mutex mtx;
@@ -55,10 +75,25 @@ void Section9_LockGuard() {
     cout << count << endl;
 }
 
+
+// Section 10: Threads with Callable Objects
+void Section10() {
+    App app;
+
+    thread t1(ref(app));
+    thread t2(ref(app));
+
+    t1.join();
+    t2.join();
+
+    cout << app.getCount() << endl;
+}
+
 int main()
 {
     //Section8_FunctionArguments();
-    Section9_LockGuard();
+    //Section9_LockGuard();
+    Section10();
 
 
     return 0;
