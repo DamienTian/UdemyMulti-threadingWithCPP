@@ -51,3 +51,6 @@
 1_Locks/.vs/1_Locks/v16/ipch/AutoPCH/5e832e323b7e0e/1_LOCKS.ipch
 2_ReturnValuesFromThread/.vs/2_ReturnValuesFromThread/v16/.suo
 2_ReturnValuesFromThread/2_ReturnValuesFromThread/Debug/vc142.idb
+*.user
+*.idb
+*.ilk
